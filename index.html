@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invincible Web Page</title>
+<style>
+  body {
+    background-color: #B5C0D0;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    text-align: center;
+    margin: 50px auto; /* Center the container horizontally */
+    max-width: 600px; /* Set maximum width for better readability */
+    padding: 20px;
+    position: relative; /* Position container relatively for absolute positioning */
+  }
+  .border-container {
+    border: 3px solid black; /* Add border */
+    padding: 20px;
+    margin-top: 50px; /* Move border down */
+  }
+  .title {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 40px; /* Increase font size */
+    margin-bottom: 40px; /* Increase margin to move it down */
+  }
+  .event-updates {
+    font-weight: bold;
+    font-size: 1.2em; /* More than normal font */
+    margin-top: 20px;
+  }
+  ol {
+    text-align: center; /* Center-align the list items */
+    padding-left: 0; /* Remove default padding */
+    list-style-position: inside; /* Place numbering inside the list items */
+    margin-top: 20px;
+  }
+  li {
+    text-align: left; /* Align list item text to the left */
+    margin-bottom: 10px; /* Add margin between list items */
+  }
+  .password-container {
+    margin-bottom: 20px; /* Add margin to separate from content */
+  }
+  .additional-info {
+    margin-top: 20px; /* Add space above the additional info */
+    text-align: center; /* Center-align the additional info */
+    font-size: 14px; /* Font size for additional info */
+    display: none; /* Initially hidden */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="password-container" id="passwordContainer">
+    <div>Password of Page: <input type="password" id="password"> <button onclick="authenticate()">Enter</button></div>
+  </div>
+
+  <div id="contentContainer" style="display: none;">
+    <div class="title" id="pageTitle">Invincibles Web Page</div> <!-- Moved inside contentContainer -->
+    <div class="border-container">
+      <div class="event-updates">Invincible Event Updates</div>
+      <ol>
+        <li>27 March 2024, Movie plan Ashok Anil Cinemas. Only for senior members.</li>
+        <li>Grand Meetup at Tharwani Solitare In May for all the members. Date will be soon.</li>
+      </ol>
+    </div>
+    <div class="additional-info" id="additionalInfo">
+      This Web Page is made by Krishna Kataria. This will be updated according to the Events. Please check regularly for not missing important Information.
+    </div>
+  </div>
+</div>
+
+<script>
+function authenticate() {
+  var password = document.getElementById("password").value;
+  if (password === "InvincibleMEMBER") {
+    // Password correct, show content
+    document.getElementById("passwordContainer").style.display = "none";
+    document.getElementById("contentContainer").style.display = "block";
+    document.getElementById("pageTitle").style.display = "block"; // Show title after entering password
+    document.getElementById("additionalInfo").style.display = "block"; // Show additional info after entering password
+  } else {
+    // Password incorrect, show error message
+    alert("Incorrect password! Access denied.");
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
